@@ -10,11 +10,9 @@ export const ScrollToIDHome = params => async dispatch => {
 }
 
 export const GetListStudio = params => async dispatch => {
-  console.log({params});
   // console.log(1,process.env.NODE_ENV,process.env.DOMAIN_API);
   try {
     dispatch({ type: actionTypes.GET_LIST_STUDIO_LOADING });
-    console.log({api});
     // setTimeout(() => {
     api.get('/rooms', params)
       .then(

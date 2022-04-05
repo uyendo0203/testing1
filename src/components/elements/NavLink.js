@@ -13,8 +13,13 @@ const NavLink = ({ navLinkId, scrollToId, navLinkText, navLinkRoute, isHomepage 
 	const dispatch = useDispatch()
 	const router = useRouter()
 
+	useEffect(() => {
+		if (navLinkRoute == router.pathname) {
+			setActiveNavLinkId(navLinkId)
+		}
+	}, [])
+
 	const handleClick = () => {
-		console.log({ navLinkId, scrollToId, activeNavLinkId });
 		if (navLinkId) {
 			setActiveNavLinkId(navLinkId);
 
@@ -26,8 +31,8 @@ const NavLink = ({ navLinkId, scrollToId, navLinkText, navLinkRoute, isHomepage 
 					setOffset(60)
 					break;
 			}
-			if (router.pathname != (navLinkRoute || "/")) {
-				router.push(navLinkRoute ? navLinkRoute : '/')
+			if (router.pathname != navLinkRoute) {
+				router.push({ pathname: navLinkRoute })
 			}
 			dispatch(ScrollToIDHome({ id: scrollToId, offset: offset, navid: navLinkId }))
 

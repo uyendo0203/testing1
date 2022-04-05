@@ -7,36 +7,36 @@ export const navLinks = [
 		navLinkText: 'home',
 		navLinkId: 'home',
 		scrollToId: 'homeContainer',
-		navLinkRoute:null
+		navLinkRoute: "/"
 	},
 	{
 		navLinkText: 'about',
 		navLinkId: 'equipment',
 		scrollToId: 'equipmentContainer',
-		navLinkRoute:null
+		navLinkRoute: "/"
 	},
 	{
 		navLinkText: 'studio',
 		navLinkId: 'studio',
 		scrollToId: '',
-		navLinkRoute:'/studio'
+		navLinkRoute: '/studio'
 	},
 	{
 		navLinkText: 'works',
 		navLinkId: 'works',
 		scrollToId: '',
-		navLinkRoute:'/works'
+		navLinkRoute: '/works'
 	},
 	{
 		navLinkText: 'services',
 		navLinkId: 'services',
 		scrollToId: 'servicesContainer',
-		navLinkRoute:null
+		navLinkRoute: "/"
 	},
 	{
 		navLinkText: 'contact',
 		navLinkId: 'contact',
 		scrollToId: 'contactContainer',
-		navLinkRoute:null
+		navLinkRoute: "/"
 	},
 ];

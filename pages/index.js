@@ -7,11 +7,10 @@ import { Sec10Home, Sec1Home, Sec2Home, Sec3Home, Sec4Home, Sec5Home, Sec6Home, 
 const Home = () => {
   const reducers = useSelector((state) => state.FicReducers)
   const dispatch = useDispatch()
- const router = useRouter()
+  const router = useRouter()
 
   useEffect(() => {
     if (reducers.DataScrollToSec) {
-      console.log({reducers})
       const element = document.getElementById(reducers.DataScrollToSec.id);
       if (element) {
         const bodyRect = document.body.getBoundingClientRect().top;
@@ -24,7 +23,6 @@ const Home = () => {
         });
         dispatch(ScrollToIDHome(null))
       }
-
     }
 
   }, [reducers.DataScrollToSec, router.pathname])
